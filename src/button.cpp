@@ -31,7 +31,7 @@ void INIT_INT1() {
   sei(); //set interupt, 인터럽트 전역적으로 활성화
 };
 
-ISR(INT1_vect) { //메인에서 osc.scopePin = portLV 이용
+ISR(INT1_vect) {
   if(millis()-time1 > 500) {
     button1LV++;
     button1LV %= 2;
