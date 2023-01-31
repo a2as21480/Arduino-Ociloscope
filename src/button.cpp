@@ -47,7 +47,7 @@ void INIT_PCINT2() {
   sei();
 };
 
-ISR(PCINT2_vect) { //메인에서 state_button2이 1인지 감시해서 while 루프 진입
+ISR(PCINT2_vect) { //메인에서 button2LV이 1인지 감시해서 while 루프 진입
   if(millis()-time2 > 500) {
     button2LV++;
     button2LV %= 2;
